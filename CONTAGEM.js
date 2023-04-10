@@ -48,6 +48,7 @@ function criarTabela(){
         }
         tabela.appendChild(corpotabela)
         document.body.appendChild(tabela)
+        tabela.style.margin='auto'
         setTimeout(function(){
             tabela.style.display='none'
         },7000)

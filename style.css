@@ -2,19 +2,93 @@
     margin: 0;
     padding: 0;
 }
+:root{
+    --cor1: #f8f6f9;
+    --divs: #475363;
+    --cards: #f0b17b;
+}
+body{
+    background-color: var(--cor1);
+    font-family: 'Ubuntu', sans-serif;
+    color:var(--divs);
+    width: 96vw;
+    height: 96vh;
+}
+header{
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+header>section{
+    text-align: center;
+    background-color: var(--cards);
+    color: black;
+    width: 50%;
+    padding: 20px;
+    border-radius: 20px;
+    flex-direction: column;
+    display: inline-block;
+    justify-content: space-between;
+}
+label{
+    margin-right: 20px;
+}
+main,footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 td{
-    border: 1px solid black;
-    width: 20px;
-    height: 20px;
+    border: 1px solid var(--divs);
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
 }
 th{
-    border: 1px solid black;
-    width: 20px;
-    height: 20px;
-    background-color: black;
+    border: 1px solid var(--divs);
+    width: 30px;
+    height: 30px;
+    background-color: var(--divs);
+    border-radius: 5px;
 }
 #botao1{
     width: 50px;
     height: 50px;
     border: 1px solid black;
+}
+main>input,footer>input{
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    border:1px solid var(--divs);
+    background-color: var(--cor1);
+    color: var(--divs);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15pt;
+    transition: .5s;
+    cursor: pointer;
+}
+main>input:hover{
+    background-color: var(--divs);
+    color: var(--cor1);
+}
+#idqtdplayer{
+    width: 70px;
+    height: 40px;
+    font-size: 15pt;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: var(--cor1);
+    border: none;
+    border-radius: 10px;
+    color: var(--divs);
+    text-align: center;
+}
+#display{
+    font-size: 30pt;
+    color: var(--divs);
+
+}
+#tabuleiro{
+    margin: auto;
 }

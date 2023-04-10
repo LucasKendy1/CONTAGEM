@@ -19,16 +19,16 @@ header{
     margin-top: 20px;
 
 }
-header>section{
-    text-align: center;
+header>#section{
+    text-align: left;
     background-color: var(--cards);
     color: black;
-    width: 50%;
+    width: 60%;
     padding: 20px;
     border-radius: 20px;
     flex-direction: column;
-    display: inline-block;
-    justify-content: space-between;
+    margin: auto;
+    
 }
 label{
     margin-right: 20px;
@@ -69,7 +69,7 @@ main>input,footer>input{
     transition: .5s;
     cursor: pointer;
 }
-main>input:hover{
+main>input:hover,footer>input:hover{
     background-color: var(--divs);
     color: var(--cor1);
 }
@@ -91,4 +91,8 @@ main>input:hover{
 }
 #tabuleiro{
     margin: auto;
+}
+#inputs{
+    margin: auto;
+    width: 90%;
 }

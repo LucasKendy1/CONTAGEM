@@ -15,9 +15,10 @@
         <p>Bem vindo! </p>
         <h1>Este é um jogo de contagem</h1>
         <br>
-        <section>
+        <div id="section">
             <p>Insira a quantidade de jogadores: </p>
             <input type="number" id="idqtdplayer">
+
             <p>Escolha a dificuldade do jogo: </p>
             <input type="radio" name="dificuldade" id="iddificuldade">
             <label for="dificuldade">Fácil</label>
@@ -27,7 +28,7 @@
             
             <input type="radio" name="dificuldade" id="iddificuldade">
             <label for="dificuldade">Difícil</label>
-        </section>
+        </div>
     </header>
     <br>
     <main>
@@ -44,8 +45,13 @@
         <br>
     </main>
     <footer>
+        <div id="inputs"></div>
+
         <input type="button" value="Finalizar" onclick="stop()">
+        
         <p id="vencedor"></p>
+
+        <div id="reload"></div>
     </footer>
     <script src="CONTAGEM.js"></script>
 </body>

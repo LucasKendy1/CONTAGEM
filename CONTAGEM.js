@@ -25,7 +25,7 @@ function regressiva(){
 }
 
 var qtdcelulas=0
-
+var tabuleiro = document.getElementById('tabuleiro')
 function criarTabela(){
     setTimeout(  function(){ 
         var tabela=document.createElement("table")
@@ -47,7 +47,7 @@ function criarTabela(){
             corpotabela.appendChild(linha)
         }
         tabela.appendChild(corpotabela)
-        document.body.appendChild(tabela)
+        tabuleiro.appendChild(tabela)
         tabela.style.margin='auto'
         setTimeout(function(){
             tabela.style.display='none'
@@ -61,17 +61,29 @@ function getRandom(min,max) {
     max = Math.floor(max)
     return (Math.floor(Math.random()*(max-min+1)+min))
 }
-
+var inputs=document.getElementById('inputs')
+var input
 function criarInputs(){
     for(var i=0; i<qtdplayer.value; i++){
-        var input=document.createElement("input")
+        input=document.createElement("input")
         input.setAttribute("type","number")
         input.setAttribute("id",i)
-        document.body.appendChild(input)
+        
+        inputs.appendChild(input)
+        input.style.width='100px'
+        input.style.height='50px'
+        input.style.borderRadius='10px'
+        input.style.border='1px solid black'
+        input.setAttribute("placeholder","Player "+i)
+        input.style.margin='10px'
+        input.style.paddingLeft='10px'
+
     }
 }
 
 var premiacao=document.getElementById('vencedor')
+var again
+var reload=document.getElementById('reload')
 function stop(){
     // window.alert(Number(qtdcelulas))
     for(var i=0; i<qtdplayer.value; i++){
@@ -85,11 +97,17 @@ function stop(){
         }
     }
     premiacao.innerHTML+=" A resposta era "+Number(qtdcelulas)
-    var again=document.createElement("input")
+    again=document.createElement("input")
     again.setAttribute("type","button")
     again.setAttribute("onclick","reload()")
     again.setAttribute("value","Recomeçar")
-    document.body.appendChild(again)
+    reload.appendChild(again)
+    again.style.width='150px'
+    again.style.height='50px'
+    again.style.borderRadius='50px'
+    again.style.width='150px'
+    again.style.cursor='pointer'
+
 }
 
 function reload(){

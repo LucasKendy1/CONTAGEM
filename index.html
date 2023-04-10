@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bem vindo ao jogo de contagem</h1>
+        <p>Insira a quantidade de jogadores</p>
+        <input type="number" id="idqtdplayer">
+        <p>Escolha a dificuldade do jogo:</p>
+
+        <input type="radio" name="dificuldade" id="iddificuldade">
+        <label for="dificuldade">Facil</label>
+        
+        <input type="radio" name="dificuldade" id="iddificuldade">
+        <label for="dificuldade">Medio</label>
+        
+        <input type="radio" name="dificuldade" id="iddificuldade">
+        <label for="dificuldade">Dificil</label>
+        
+
+    </header>
+    <main>
+        
+        <div id="display"></div>
+        <div id="tabuleiro"></div>
+        
+        <input type="button" value="Começar" onclick="start()">
+        <input type="button" value="Finalizar" onclick="stop()">
+    </main>
+
+    <script src="CONTAGEM.js"></script>
+</body>
+</html>

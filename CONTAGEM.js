@@ -15,7 +15,6 @@ function start(){
     regressiva()
     
     criarTabela()
-    // getRandom(0,1)
 }
 
 function regressiva(){
@@ -71,6 +70,27 @@ function criarInputs(){
     }
 }
 
+var premiacao=document.getElementById('vencedor')
 function stop(){
-    window.alert(Number(qtdcelulas))
+    // window.alert(Number(qtdcelulas))
+    for(var i=0; i<qtdplayer.value; i++){
+        var btn=document.getElementById(i)
+        if(btn.value==Number(qtdcelulas)){
+            i+=1
+            premiacao.innerHTML="O jogador "+i+ "ganhou a partida!"
+        }
+        else{
+            premiacao.innerHTML="Ninguem acertou!"
+        }
+    }
+    premiacao.innerHTML+=" A resposta era "+Number(qtdcelulas)
+    var again=document.createElement("input")
+    again.setAttribute("type","button")
+    again.setAttribute("onclick","reload()")
+    again.setAttribute("value","Recomeçar")
+    document.body.appendChild(again)
+}
+
+function reload(){
+    location.reload()
 }
